@@ -4,7 +4,7 @@ var firmata = require("firmata");
 var board = new firmata.Board("/dev/ttyACM0", function(){// ACM (Abstract Control Model)
                                                          // za serijsko komunikacijo z Arduinom (lahko je USB)
     console.log("Priklop na Arduino");
-    board.pinMode(8, board.MODES.OUTPUT); // Posamezni pin konfiguriramo, da deluje kot vhod ali izhod
+    board.pinMode(2, board.MODES.OUTPUT); // Posamezni pin konfiguriramo, da deluje kot vhod ali izhod
     board.pinMode(13, board.MODES.OUTPUT); // Posamezni pin konfiguriramo, da deluje kot vhod ali izhod
 });
 
@@ -28,22 +28,22 @@ http.createServer(function(req, res){ // http.createServer([requestListener])
     
     if (operator == 2) {
         console.log("Izključevanje LED2");
-        board.digitalWrite(8, board.LOW);
+        board.digitalWrite(2, board.LOW);
     }
 
     if (operator == 3) {
         console.log("Vključevanje LED2");
-        board.digitalWrite(8, board.HIGH);
+        board.digitalWrite(2, board.HIGH);
     } 
         if (operator == 4) {
         console.log("Vključevanje LED2");
-        board.digitalWrite(8, board.LOW);
+        board.digitalWrite(2, board.LOW);
         board.digitalWrite(13, board.LOW);
         
     } 
     if (operator == 5) {
         console.log("Vključevanje LED2");
-        board.digitalWrite(8, board.HIGH);
+        board.digitalWrite(2, board.HIGH);
         board.digitalWrite(13, board.HIGH);
     }
     

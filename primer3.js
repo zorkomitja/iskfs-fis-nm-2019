@@ -26,12 +26,12 @@ http.createServer(function(req, res){ // http.createServer([requestListener])
     
     if (operator2 == 0) {
         console.log("Izključevanje LED2");
-        board.digitalWrite(8, board.LOW);
+        board.digitalWrite(2, board.LOW);
     }
 
     if (operator2 == 1) {
         console.log("Vključevanje LED2");
-        board.digitalWrite(8, board.HIGH);
+        board.digitalWrite(2 ,board.HIGH);
     }  
         
     res.writeHead(200, {"Content-Type": "text/html; charset=utf-8"});

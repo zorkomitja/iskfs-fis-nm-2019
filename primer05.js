@@ -33,10 +33,10 @@ io.sockets.on("connection", function(socket) {
             board.digitalWrite(13, board.LOW); // zapišemo 0V na pin13
         }
         if (štUkaza == "3") {
-            board.digitalWrite(8, board.HIGH); // zapišemo +5V na pin 8
+            board.digitalWrite(2, board.HIGH); // zapišemo +5V na pin 8
         }
         if (štUkaza == "2") {
-            board.digitalWrite(8, board.LOW); // zapišemo 0V na pin8
+            board.digitalWrite(2, board.LOW); // zapišemo 0V na pin8
         }
     });
 });
